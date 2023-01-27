@@ -1,4 +1,4 @@
-const player1 = document.querySelector('#player_name_input');
+const player1 = document.querySelector('#player_name_input').value;
 const playButton = document.querySelector('#play_button');
 
 const circle1 = document.querySelector('#circle1')
@@ -14,8 +14,10 @@ const instrctImg4 = document.querySelector('.instruct_img4');
 const instrctImg5 = document.querySelector('.instruct_img5');
 
 function playFunction(){
-    console.log("click")
+ 
     localStorage.setItem("player1", player1.value);
+    window.location.href="play.html";
+
 }
 
 function circleFunction1(){
