@@ -8,12 +8,15 @@
 
 body{
     background-image: url('/images/background.jpg');
+   
 }
 
 .logo{
     text-align: center;
     margin-top: 20px;
 }
+
+/* input section  */
 
 .input_section{
     margin:0 auto;
@@ -23,6 +26,7 @@ body{
     background-color: rgba(12, 44, 150, 0.75);
     width:30%;
     margin-top: 50px;
+    padding:12px;
 }
 
 #player_name_input{
@@ -56,4 +60,27 @@ body{
 
 #play_button:hover{
     background-color: #30ac17;
+}
+
+/* footer section  */
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(7, 36, 131, 0.75);;
+    height: 50vh;
+    margin-top: 30px;
+}
+
+.news{
+    margin: 0 50px;
+}
+
+.footer_block{
+    width:30%;
+    background-color: rgba(12, 44, 150, 0.75);
+    margin-top: 80px;
+    color:white;
+    text-align: center;
+    
 }
