@@ -97,7 +97,8 @@ footer{
     background-color: rgba(12, 44, 150, 0.75);
     margin-top: 80px;
     color:white;
-    /* text-align: center; */
+    text-align: center;
+
 
 }
 
@@ -155,6 +156,9 @@ footer{
     font-family: var(--font);
     font-size: 18px;
     margin-top: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    overflow: scroll;
 }
 
 
