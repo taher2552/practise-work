@@ -148,7 +148,13 @@ footer{
 }
 
 .ul1{
-    margin-left: 20px;
+    margin-left: 40px;
+}
+
+.news_ul_section{
+    font-family: var(--font);
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 
