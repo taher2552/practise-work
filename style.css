@@ -124,11 +124,13 @@ footer{
 .fa-circle{
     margin-left: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .fa-circle:hover{
     cursor: pointer;
 }
+
 
 
 
