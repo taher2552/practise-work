@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+
+/* general class  */
+
+.hidden{
+    display: none;
+}
+
+.active{
+    color: rgb(145, 9, 145);
+}
 /* main page section  */
 
 body{
@@ -85,9 +95,9 @@ footer{
 
 }
 
-/* about section  */
+/* footer block  section  */
 
-.about_head{
+.block_head{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -100,3 +110,26 @@ footer{
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.instruction_img{
+    margin-top: 50px;
+}
+
+.instruction_img p{
+    font-size: 18px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fa-circle{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.fa-circle:hover{
+    cursor: pointer;
+}
+
+
+
+

@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skribbl-Free Multiplayer drwaing</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <!-- link style.css file in html page  -->
+  
     <link rel="stylesheet" href="style.css">
+
+    <!-- cdn link for fa icons  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <main>
@@ -22,7 +30,7 @@
     </main>
     <footer>
      <div class="about footer_block">
-        <div class="about_head">
+        <div class="block_head">
             <img src="https://skribbl.io/img/about.gif" alt="">
             <h3>About</h3>
             <div></div>
@@ -39,12 +47,54 @@
         </div>
      </div>
      <div class="news footer_block">
-        <h3>News</h3>
+        <div class="block_head">
+            <img src="https://skribbl.io/img/news.gif" alt="">
+            <h3>News</h3>
+            <div></div>
+        </div>
+        
      </div>
      <div class="play footer_block">
-        <h3>How to play</h3>
+        <div class="block_head">
+            <img src="https://skribbl.io/img/how.gif" alt="" srcset="">
+            <h3>How to play</h3>
+            <div></div>
+        </div>
+
+        <div class="instruction_img instruct_img1">
+            <img src="https://skribbl.io/img/tutorial/step1.gif" alt="">
+            <p>When it's your turn, choose a word you want to draw!</p>
+        </div>
+        <div class="instruction_img instruct_img2 hidden">
+            <img src="https://skribbl.io/img/tutorial/step2.gif" alt="">
+            <p>Try to draw your choosen word! No spelling!</p>
+        </div>
+        <div class="instruction_img instruct_img3 hidden">
+            <img src="https://skribbl.io/img/tutorial/step3.gif" alt="">
+            <p>Let other players try to guess your drawn word!</p>
+        </div>
+        <div class="instruction_img instruct_img4 hidden">
+            <img src="https://skribbl.io/img/tutorial/step4.gif" alt="">
+            <p>Let other players try to guess your drawn word!</p>
+        </div>
+        <div class="instruction_img instruct_img5 hidden">
+            <img src="https://skribbl.io/img/tutorial/step5.gif" alt="">
+            <p>Score the most points and be crowned the winner at the end!</p>
+        </div>
+
+        <div class="circle">
+          <i class="fa fa-circle active" id="circle1" aria-hidden="true"></i>
+          <i class="fa fa-circle"  id="circle2" aria-hidden="true"></i>
+          <i class="fa fa-circle"  id="circle3" aria-hidden="true"></i>
+          <i class="fa fa-circle"  id="circle4" aria-hidden="true"></i>
+          <i class="fa fa-circle"  id="circle5" aria-hidden="true"></i>
+        </div>
+
+
+        
      </div>
     </footer>
+   
 
     <script src="script.js"></script>
 </body>
