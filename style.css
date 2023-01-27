@@ -5,10 +5,12 @@
 }
 
 /* main page section  */
-
-body{
-    background-image: url('/images/background.png');
-}
+#background{
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    }
 
 .logo{
     text-align: center;
@@ -16,13 +18,13 @@ body{
 }
 
 .input_section{
-   border:1px solid red;
     margin:0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgba(12, 44, 150, 0.75);
     width:30%;
+    margin-top: 50px;
 }
 
 #player_name_input{
