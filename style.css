@@ -68,7 +68,7 @@ footer{
     display: flex;
     justify-content: center;
     background-color: rgba(7, 36, 131, 0.75);;
-    height: 50vh;
+    height: 100%;
     margin-top: 30px;
 }
 
@@ -77,10 +77,26 @@ footer{
 }
 
 .footer_block{
-    width:30%;
+    width:25%;
     background-color: rgba(12, 44, 150, 0.75);
     margin-top: 80px;
     color:white;
     text-align: center;
-    
+
+}
+
+/* about section  */
+
+.about_head{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.about_para{
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
