@@ -49,14 +49,14 @@ body{
     outline:none;
     padding:12px;
     font-size: 20px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 10px;
 }
 
 .btn{
     background-color: #53e237;
     padding:12px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 30px;
     color:white;
     border:none;
@@ -140,6 +140,11 @@ footer{
 .news_head{
     display: flex;
     justify-content: space-between;
+    font-family: var(--font);
+    font-size: 18px;
+    margin-top: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #eee;
 }
 
 
