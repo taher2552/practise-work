@@ -23,7 +23,7 @@
 /* main page section  */
 
 body{
-    background-image: url('/images/background.jpg');
+    background-image: url('./images/background.jpg');
    
 }
 
@@ -98,8 +98,6 @@ footer{
     margin-top: 80px;
     color:white;
     text-align: center;
-
-
 }
 
 /* footer block  section  */
@@ -158,7 +156,7 @@ footer{
     margin-top: 10px;
     text-align: left;
     margin-bottom: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 
