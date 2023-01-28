@@ -24,7 +24,7 @@ let timeCountDown = setInterval(()=>{
   }
 },1000);
 
-firstPlayer.innerText=localStorage.getItem("player1") || "player1"
+firstPlayer.innerText=localStorage.getItem("player1") || "player1";
 
 
 

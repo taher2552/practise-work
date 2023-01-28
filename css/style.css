@@ -233,7 +233,7 @@ footer{
 /* play area section starts here  */
 .play_area{
     display: grid;
-    grid-template-columns: 15% 60% 25%;
+    grid-template-columns: 20% 55% 25%;
     column-gap: 20px;
     justify-content:center;
     width:95%;
@@ -259,6 +259,8 @@ footer{
     justify-content: space-around;
 }
 
+
+
 .points{
     text-align: center;
     font-size: 15px;
@@ -278,9 +280,13 @@ footer{
  background-color: white;
 }
 
-.animated_character{
+.animated_character, .pencil{
     height:50x;
     width:50px;
+}
+
+.pencil2, .pencil3,.pencil4,.pencil5{
+    visibility: hidden;
 }
 
 /* play area section ends here  */
