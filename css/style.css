@@ -454,6 +454,7 @@ h1 {
 #select_options{
     width:400px;
     height:40px;
+    outline: none;
 }
 
 /* room page css ends here  */
