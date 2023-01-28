@@ -1,4 +1,4 @@
-const player1 = document.querySelector('#player_name_input').value;
+const player1 = document.querySelector('#player_name_input');
 const playButton = document.querySelector('#play_button');
 
 const circle1 = document.querySelector('#circle1')
@@ -81,11 +81,19 @@ function circleFunction5(){
  instrctImg2.style.display="none";
 }
 
-playButton.addEventListener('click', playFunction);
 
+
+
+playButton.addEventListener('click', playFunction);
 circle1.addEventListener('click', circleFunction1)
 circle2.addEventListener('click', circleFunction2)
 circle3.addEventListener('click', circleFunction3)
 circle4.addEventListener('click', circleFunction4)
 circle5.addEventListener('click', circleFunction5)
+
+// first page js ends here
+
+
+
+
 
