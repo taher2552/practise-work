@@ -278,6 +278,7 @@ footer{
 
 .word_typing{
  background-color: white;
+ position: relative;
 }
 
 .animated_character, .pencil{
@@ -418,13 +419,13 @@ h1 {
 }
 
 #word_input{
+    position: absolute;
     outline: none;
     font-size: 20px;
     padding: 12px;
     width: 90%;
     margin-left:5%;
-    margin-top: 150px;
-
+    bottom:10px;
 }
 
 /* word typing area ends here  */
