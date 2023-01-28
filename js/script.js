@@ -16,7 +16,7 @@ const instrctImg5 = document.querySelector('.instruct_img5');
 function playFunction(){
  
     localStorage.setItem("player1", player1.value);
-    window.location.href="play.html";
+    window.location.href="./../html/play.html";
 
 }
 

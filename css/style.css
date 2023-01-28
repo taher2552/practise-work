@@ -33,7 +33,7 @@
 /* front page section starts here  */
 
 body{
-    background-image: url('./images/background.jpg');
+    background-image: url('./../images/background.jpg');
    
 }
 
@@ -220,6 +220,8 @@ footer{
     left:5%;
 }
 
+
+
 .guess_word{
     font-weight: bolder;
     font-family: var(--font);
@@ -233,7 +235,6 @@ footer{
     grid-template-columns: 15% 60% 25%;
     column-gap: 20px;
     justify-content:center;
-    align-items: center;
     width:95%;
     margin: 0 auto;
 }
@@ -243,7 +244,7 @@ footer{
   font-size: 18px;
   font-weight: bolder;
   font-family: var(--font);
-  height: 500px;
+  height: max-content;
 }
 
 .player_list .player:nth-child(even){
@@ -410,6 +411,23 @@ h1 {
 }
 
 /* word typing area ends here  */
+
+
+/* room page css starts here  */
+
+.room_timer{
+    position: absolute;
+    top:40%;
+    left:8%;
+}
+
+.form_area{
+    width:100%;
+    height: 100%;
+    background-color: white;
+}
+
+/* room page css ends here  */
 
 
 

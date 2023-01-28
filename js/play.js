@@ -2,10 +2,10 @@
 const timer = document.querySelector('.timer');
 const resultDisplay = document.querySelector('.result_display');
 
+const totalRound=3;
 
 
-let time=5;
-
+  let time=5;
 let timeCountDown = setInterval(()=>{
  timer.innerText=time--;
  if(time<9){
@@ -15,12 +15,13 @@ let timeCountDown = setInterval(()=>{
     clearInterval(timeCountDown);
     resultDisplay.style.display = "block";
 
-    setInterval(()=>{
+    setTimeout(()=>{
       resultDisplay.style.display = "none";
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time=5;
     },3000);
 
   }
 },1000)
+
+
 
