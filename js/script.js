@@ -1,5 +1,6 @@
 const player1 = document.querySelector('#player_name_input');
 const playButton = document.querySelector('#play_button');
+const roomButton = document.querySelector('#room_button');
 
 const circle1 = document.querySelector('#circle1')
 const circle2 = document.querySelector('#circle2')
@@ -17,6 +18,12 @@ function playFunction(){
  
     localStorage.setItem("player1", player1.value);
     window.location.href="./../html/play.html";
+
+}
+function roomFunction(){
+ 
+    localStorage.setItem("player1", player1.value);
+    window.location.href="./../html/room.html";
 
 }
 
@@ -85,6 +92,7 @@ function circleFunction5(){
 
 
 playButton.addEventListener('click', playFunction);
+roomButton.addEventListener('click',roomFunction)
 circle1.addEventListener('click', circleFunction1)
 circle2.addEventListener('click', circleFunction2)
 circle3.addEventListener('click', circleFunction3)

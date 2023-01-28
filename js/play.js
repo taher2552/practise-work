@@ -5,7 +5,7 @@ const resultDisplay = document.querySelector('.result_display');
 const totalRound=3;
 
 
-  let time=5;
+  let time=10;
 let timeCountDown = setInterval(()=>{
  timer.innerText=time--;
  if(time<9){
