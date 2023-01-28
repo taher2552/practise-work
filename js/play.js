@@ -1,6 +1,7 @@
 
 const timer = document.querySelector('.timer');
 const resultDisplay = document.querySelector('.result_display');
+const firstPlayer = document.querySelector('.first_player');
 
 const totalRound=3;
 
@@ -21,7 +22,9 @@ let timeCountDown = setInterval(()=>{
     },3000);
 
   }
-},1000)
+},1000);
+
+firstPlayer.innerText=localStorage.getItem("player1") || "player1"
 
 
 

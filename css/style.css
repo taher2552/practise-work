@@ -156,6 +156,7 @@ footer{
     margin-top: 10px;
     padding-bottom: 3px;
     border-bottom: 1px solid #eee;
+    
 }
 
 .ul1{
@@ -168,7 +169,7 @@ footer{
     margin-top: 10px;
     text-align: left;
     margin-bottom: 10px;
-    overflow-y: scroll;
+    padding-left:25px;
 }
 
 /* footer block section ends here  */
