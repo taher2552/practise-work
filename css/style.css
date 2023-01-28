@@ -425,6 +425,35 @@ h1 {
     width:100%;
     height: 100%;
     background-color: white;
+    padding: 10px;
+    background-color: grey;
+}
+
+.option_content{
+    display: flex;
+    align-items: center;
+}
+
+.option_content img{
+    margin-right: 10px;
+}
+
+.option_content p{
+    color:white;
+    font-family: var(--font);
+    font-size: 20px;
+}
+
+.option_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#select_options{
+    width:400px;
+    height:40px;
 }
 
 /* room page css ends here  */
