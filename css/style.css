@@ -417,6 +417,16 @@ h1 {
     background-color: rgb(226, 221, 221);
 }
 
+#word_input{
+    outline: none;
+    font-size: 20px;
+    padding: 12px;
+    width: 90%;
+    margin-left:5%;
+    margin-top: 150px;
+
+}
+
 /* word typing area ends here  */
 
 
