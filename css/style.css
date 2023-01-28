@@ -34,7 +34,6 @@
 
 body{
     background-image: url('./../images/background.jpg');
-   
 }
 
 .logo{
@@ -234,7 +233,7 @@ footer{
 /* play area section starts here  */
 .play_area{
     display: grid;
-    grid-template-columns: 20% 55% 25%;
+    grid-template-columns: 15% 60% 25%;
     column-gap: 20px;
     justify-content:center;
     width:95%;
@@ -303,7 +302,6 @@ h1 {
 .drawing_box {
     height: 100%;
     display: flex;
-    position: relative;
 }
 
 .like_dislike{

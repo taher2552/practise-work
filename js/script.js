@@ -41,6 +41,7 @@ function circleFunction1(){
  instrctImg5.style.display="none";
  instrctImg2.style.display="none";
 }
+
 function circleFunction2(){
  circle1.classList.remove('active');
  circle3.classList.remove('active');
@@ -53,6 +54,7 @@ function circleFunction2(){
  instrctImg5.style.display="none";
  instrctImg2.style.display="block";
 }
+
 function circleFunction3(){
  circle1.classList.remove('active');
  circle3.classList.add('active');
@@ -65,6 +67,7 @@ function circleFunction3(){
  instrctImg5.style.display="none";
  instrctImg2.style.display="none";
 }
+
 function circleFunction4(){
  circle1.classList.remove('active');
  circle3.classList.remove('active');
