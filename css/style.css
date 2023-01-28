@@ -303,6 +303,13 @@ h1 {
 .drawing_box {
     height: 100%;
     display: flex;
+    position: relative;
+}
+
+.like_dislike{
+    position: absolute;
+    right:10px;
+    cursor: pointer;
 }
 
 #toolbar {

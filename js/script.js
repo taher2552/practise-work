@@ -18,14 +18,14 @@ function playFunction(){
  
     localStorage.setItem("player1", player1.value);
     player1.value="";
-    window.location.href="./../html/play.html";
+    window.location.href="html/play.html";
 
 }
 function roomFunction(){
  
     localStorage.setItem("player1", player1.value);
     player1.value="";
-    window.location.href="./../html/room.html";
+    window.location.href="html/room.html";
 
 }
 
