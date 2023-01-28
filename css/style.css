@@ -481,13 +481,16 @@ textarea::placeholder{
 
 .copy_link{
     text-align: center;
-    color: blue;
+    color: 1368b8;
     background-color: white;
     width:50%;
     margin:0 auto;
     font-size: 20px;
     font-family: var(--font);
     padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 
 }
@@ -507,6 +510,17 @@ textarea::placeholder{
 .link{
     margin-right: 150px;
     margin-top: 20px;
+}
+
+.copy_button{
+    background-color: #1368b8;
+    color:white;
+    padding:10px;
+    font-size: 20px;
+    font-family: var(--font);
+    border:none;
+    cursor: pointer;
+
 }
 
 /* room page css ends here  */

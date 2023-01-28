@@ -10,5 +10,10 @@ linkSection.addEventListener('mouseover', ()=>{
 linkSection.addEventListener('mouseout', ()=>{
     hoverLink.style.display="none";
     hoverOnMe.style.display="block";
-    console.log("over")
 })
+
+function copyFunction(){
+    textToCopy=hoverLink.innerText;
+    navigator.clipboard.writeText(textToCopy);
+}
+
