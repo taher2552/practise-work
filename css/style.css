@@ -226,6 +226,7 @@ footer{
 .guess_word{
     font-weight: bolder;
     font-family: var(--font);
+    text-align: center;
 }
 
 /* guess word  section ends here  */
@@ -399,6 +400,8 @@ h1 {
     color:rgb(48, 235, 48);
 }
 
+
+
 /* result display page ends here  */
 
 /* word typing area starts here  */
@@ -414,8 +417,15 @@ h1 {
     padding:5px;
 }
 
+
+
 .show_word_area :nth-child(odd){
     background-color: rgb(226, 221, 221);
+}
+
+.show_word_area{
+    height:80%;
+    overflow-y:scroll;
 }
 
 #word_input{
@@ -542,7 +552,9 @@ textarea::placeholder{
 }
 
 /* room page css ends here  */
-
+.green_background{
+    background-color: rgb(92, 221, 92);
+}
 
 
 
