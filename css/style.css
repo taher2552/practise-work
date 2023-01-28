@@ -276,6 +276,8 @@ footer{
  height:500px;
 }
 
+
+
 .word_typing{
  background-color: white;
  position: relative;
@@ -304,10 +306,8 @@ h1 {
     display: flex;
 }
 
-.like_dislike{
-    position: absolute;
-    right:10px;
-    cursor: pointer;
+.thumbs_up, .thumbs_down{
+    cursor:pointer;
 }
 
 #toolbar {

@@ -10,7 +10,32 @@ const totalChar = document.querySelector('.total_char');
 const realWord = document.querySelector('.real_word');
 const thumbsUp = document.querySelector('.thumbs_up');
 const thumbsDown = document.querySelector('.thumbs_down');
+let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
+
+
+function likeDislikeFunction(e){
+  let action;
+
+  if(e.target.classList.contains('thumbs_up')){
+     action="like";
+  }
+  else if(e.target.classList.contains('thumbs_down')){
+    action="dislike";
+  }
+
+
+  showWordArea.innerHTML += ` <div class="written_words">
+  <p class="written_by">${contestantName} ${action} the drawing</p><span class="word_line"></span>
+</div>`
+
+
+thumbsUp.style.display="none";
+thumbsDown.style.display="none";
+}
+
+thumbsUp.addEventListener('click',likeDislikeFunction)
+thumbsDown.addEventListener('click',likeDislikeFunction)
 
 
 
@@ -18,10 +43,6 @@ firstPlayer.innerText=localStorage.getItem("player1") || "player1";
 
 function wordInputSubmit(e){
   e.preventDefault();
-  
-  let contestantName = localStorage.getItem('player1') || "player1"
-  
-  
   if(wordInput.value==word){
     wordInputValue="You guess the right word";
   }else{

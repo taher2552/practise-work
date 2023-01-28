@@ -19,5 +19,7 @@ function copyFunction(){
 
 let firstPlayerName = localStorage.getItem("player1")
 
-firstPlayer.innerText= firstPlayerName || "Player 1"
+firstPlayer.innerText= firstPlayerName || "Player 1";
+
+
 
