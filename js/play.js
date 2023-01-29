@@ -16,11 +16,16 @@ const guessWord = document.querySelector('.guess_word');
 const playerToChooseWord = document.querySelector('.player_to_choose_word');
 const player1NameForScore = document.querySelector('.player_1_name_for_score');
 let player1Score = document.querySelector('.player_1_score');
+let currentRound = document.querySelector('.current_round');
 let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
 let word;
 let listOfWords = JSON.parse(localStorage.getItem('wordList'));
 
+init();
+
+
+function init(){
 
 guessWord.style.display="none";
 wordForm.style.display="none";
@@ -29,8 +34,9 @@ player1NameForScore.innerText = contestantName;
 firstPlayer.innerText=contestantName;
 player1Score.innerText="";
 arrOfWords.innerText="";
+currentRound.innerText=1;
 
-
+}
 
 
 
@@ -136,7 +142,16 @@ if(time<9){
      totalChar.innerText=word.length;
      fillIn.innerHTML+=totalChar.innerText;
      wordDisplay.style.display="block";
+     let round=Number(currentRound.innerText);
+     round++;
+
+     currentRound.innerText=round;
+
      guessWord.style.display="none";
+     if(round>3){
+      
+      init();
+     }
    },5000);
 
  }
