@@ -11,8 +11,13 @@ const realWord = document.querySelector('.real_word');
 const thumbsUp = document.querySelector('.thumbs_up');
 const thumbsDown = document.querySelector('.thumbs_down');
 const arrOfWords = document.querySelector('.arr_of_words');
+const wordDisplay = document.querySelector('.word_display');
+const guessWord = document.querySelector('.guess_word');
 let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
+let word;
+
+guessWord.style.display="none";
 
 
 
@@ -67,19 +72,29 @@ function wordInputSubmit(e){
 
 
 let listOfWords = JSON.parse(localStorage.getItem('wordList'));
+arrOfWords.innerText="";
 
-arrOfWords.innerText=listOfWords.join(' ');
-let word=listOfWords[2].trim();
-fillIn.innerText=""
-for(let i=0; i<word.length;i++){
-  fillIn.innerHTML+="_"+'&#32';
+for(let i=0; i<listOfWords.length;i++){
+  let newSpan= document.createElement('span');
+  newSpan.setAttribute('class', "words_to_display")
+  newSpan.innerText=listOfWords[i]+" "
+  arrOfWords.append(newSpan)
 }
+
+
+arrOfWords.addEventListener('click', (e)=>{
+   word=e.target.innerText.trim();
+   wordDisplay.style.display="none";
+   guessWord.style.display="block";
+   fillIn.innerText=""; 
+
+   for(let i=0; i<word.length;i++){
+    fillIn.innerHTML+="_"+'&#32';
+  }
 
 totalChar.innerText=word.length;
 fillIn.innerHTML+=totalChar.innerText;
 realWord.innerText = word;
-
-wordForm.addEventListener('submit',wordInputSubmit);
 
 
 let time=10;
@@ -103,10 +118,23 @@ let timeCountDown = setInterval(()=>{
       }
       totalChar.innerText=word.length;
       fillIn.innerHTML+=totalChar.innerText;
+      wordDisplay.style.display="block";
+      guessWord.style.display="none";
     },3000);
 
   }
 },1000);
+
+
+
+})
+
+
+
+
+
+wordForm.addEventListener('submit',wordInputSubmit);
+
 
 
 

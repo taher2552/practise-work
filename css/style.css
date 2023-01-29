@@ -368,15 +368,7 @@ h1 {
     display: none;
 }
 
-.word_display{
-    background-color: rgba(0,0,0,0.6);
-    height: 100%;
-    width:100%;
-    z-index: 1000;
-    position: relative;
-    text-align: center;
-    top:-500px;
-}
+
 
 .result_content{
     position: absolute;
@@ -567,9 +559,64 @@ textarea::placeholder{
 }
 
 /* room page css ends here  */
-.green_background{
-    background-color: rgb(92, 221, 92);
+
+
+/* choose word  section  */
+
+.word_display{
+    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+    width:100%;
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+    top:-500px;
 }
+
+.word_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    color:white;
+    padding-top: 20%;
+}
+
+.word_content h2{
+    font-size: 30px;
+    font-family: var(--font);
+}
+
+.arr_of_words{
+    margin-top: 30px;
+    cursor:pointer;   
+}
+
+.words_to_display{
+    font-size:30px;
+    text-align: center;
+    margin-left: 5px;
+    font-family: var(--font);
+}
+
+.arr_of_words :nth-child(odd){
+    border:2px solid white;
+    padding:10px;
+    
+    
+}
+.arr_of_words :nth-child(even){
+    background-color: grey;
+    padding:10px;
+    border:2px solid transparent
+    
+    
+}
+
+
+
+/* choose word section ends here  */
 
 
 
