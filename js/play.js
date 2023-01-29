@@ -15,6 +15,7 @@ const wordDisplay = document.querySelector('.word_display');
 const guessWord = document.querySelector('.guess_word');
 const playerToChooseWord = document.querySelector('.player_to_choose_word');
 const player1NameForScore = document.querySelector('.player_1_name_for_score');
+const winnerDisplay = document.querySelector('.winner_display');
 let player1Score = document.querySelector('.player_1_score');
 let currentRound = document.querySelector('.current_round');
 let contestantName = localStorage.getItem('player1') || "player1"
@@ -33,8 +34,9 @@ playerToChooseWord.innerText=contestantName;
 player1NameForScore.innerText = contestantName;
 firstPlayer.innerText=contestantName;
 player1Score.innerText="";
-arrOfWords.innerText="";
 currentRound.innerText=1;
+winnerDisplay.style.display="none";
+wordDisplay.style.display="block";
 
 }
 
@@ -116,7 +118,7 @@ fillIn.innerHTML+=totalChar.innerText;
 realWord.innerText = word;
 
 
-let time=10;
+let time=5;
 let timeCountDown = setInterval(()=>{
 timer.innerText=time--;
 
@@ -140,8 +142,10 @@ if(time<9){
        fillIn.innerHTML+="_"+'&#32';
      }
      totalChar.innerText=word.length;
+
      fillIn.innerHTML+=totalChar.innerText;
      wordDisplay.style.display="block";
+
      let round=Number(currentRound.innerText);
      round++;
 
@@ -149,10 +153,19 @@ if(time<9){
 
      guessWord.style.display="none";
      if(round>3){
-      
-      init();
+      currentRound.innerText=1;
+      wordDisplay.style.display="none";
+      resultDisplay.style.display = "none";
+      winnerDisplay.style.display="block";
+
+      setTimeout(()=>{
+        init(); 
+      },3000)
+        
      }
-   },5000);
+   },3000);
+
+
 
  }
 },1000);
