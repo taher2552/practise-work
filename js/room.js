@@ -13,6 +13,7 @@ function copyFunction(){
 
 function startFunction(){
     let wordArray = createWord.value.split(',');
+    alert("words created successfully")
     localStorage.setItem("wordList", JSON.stringify(wordArray));
 }
 

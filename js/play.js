@@ -13,11 +13,18 @@ const thumbsDown = document.querySelector('.thumbs_down');
 const arrOfWords = document.querySelector('.arr_of_words');
 const wordDisplay = document.querySelector('.word_display');
 const guessWord = document.querySelector('.guess_word');
+const playerToChooseWord = document.querySelector('.player_to_choose_word');
 let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
 let word;
 
 guessWord.style.display="none";
+wordForm.style.display="none";
+playerToChooseWord.innerText=contestantName;
+
+function init(){
+  
+}
 
 
 
@@ -86,6 +93,7 @@ arrOfWords.addEventListener('click', (e)=>{
    word=e.target.innerText.trim();
    wordDisplay.style.display="none";
    guessWord.style.display="block";
+   wordForm.style.display="block";
    fillIn.innerText=""; 
 
    for(let i=0; i<word.length;i++){
