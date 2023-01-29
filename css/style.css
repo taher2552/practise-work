@@ -368,6 +368,16 @@ h1 {
     display: none;
 }
 
+.word_display{
+    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+    width:100%;
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+    top:-500px;
+}
+
 .result_content{
     position: absolute;
     top:50%;

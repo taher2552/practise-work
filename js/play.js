@@ -10,6 +10,7 @@ const totalChar = document.querySelector('.total_char');
 const realWord = document.querySelector('.real_word');
 const thumbsUp = document.querySelector('.thumbs_up');
 const thumbsDown = document.querySelector('.thumbs_down');
+const arrOfWords = document.querySelector('.arr_of_words');
 let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
 
@@ -66,6 +67,8 @@ function wordInputSubmit(e){
 
 
 let listOfWords = JSON.parse(localStorage.getItem('wordList'));
+
+arrOfWords.innerText=listOfWords.join(' ');
 let word=listOfWords[2].trim();
 fillIn.innerText=""
 for(let i=0; i<word.length;i++){
