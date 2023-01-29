@@ -620,7 +620,9 @@ textarea::placeholder{
 
 
 /* choose word section ends here  */
-
+.green{
+    background-color: #53e237 !important;
+}
 
 
 

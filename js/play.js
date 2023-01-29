@@ -14,6 +14,8 @@ const arrOfWords = document.querySelector('.arr_of_words');
 const wordDisplay = document.querySelector('.word_display');
 const guessWord = document.querySelector('.guess_word');
 const playerToChooseWord = document.querySelector('.player_to_choose_word');
+const player1NameForScore = document.querySelector('.player_1_name_for_score');
+const player1Score = document.querySelector('.player_1_score');
 let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
 let word;
@@ -21,6 +23,7 @@ let word;
 guessWord.style.display="none";
 wordForm.style.display="none";
 playerToChooseWord.innerText=contestantName;
+player1NameForScore.innerText = contestantName;
 
 function init(){
   
@@ -58,16 +61,19 @@ firstPlayer.innerText=localStorage.getItem("player1") || "player1";
 
 function wordInputSubmit(e){
   e.preventDefault();
+  let greenClass;
   if(wordInput.value==word){
     wordInputValue="You guess the right word";
+    greenClass="green";
   }else{
     wordInputValue=wordInput.value;
-
+    greenClass=""
+    
   }
 
 
-  showWordArea.innerHTML += ` <div class="written_words">
-  <p class="written_by">${contestantName}:</p><span class="word_line">${wordInputValue}</span>
+  showWordArea.innerHTML += ` <div class="written_words  ${greenClass}">
+  <p class="written_by ">${contestantName}:</p><span class="word_line">${wordInputValue}</span>
 </div>`
   
 
