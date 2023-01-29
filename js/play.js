@@ -15,19 +15,22 @@ const wordDisplay = document.querySelector('.word_display');
 const guessWord = document.querySelector('.guess_word');
 const playerToChooseWord = document.querySelector('.player_to_choose_word');
 const player1NameForScore = document.querySelector('.player_1_name_for_score');
-const player1Score = document.querySelector('.player_1_score');
+let player1Score = document.querySelector('.player_1_score');
 let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
 let word;
+let listOfWords = JSON.parse(localStorage.getItem('wordList'));
+
 
 guessWord.style.display="none";
 wordForm.style.display="none";
 playerToChooseWord.innerText=contestantName;
 player1NameForScore.innerText = contestantName;
+firstPlayer.innerText=contestantName;
+player1Score.innerText="";
+arrOfWords.innerText="";
 
-function init(){
-  
-}
+
 
 
 
@@ -57,13 +60,22 @@ thumbsDown.addEventListener('click',likeDislikeFunction)
 
 
 
-firstPlayer.innerText=localStorage.getItem("player1") || "player1";
 
 function wordInputSubmit(e){
   e.preventDefault();
   let greenClass;
   if(wordInput.value==word){
     wordInputValue="You guess the right word";
+    let scr = Number(player1Score.innerText);
+   scr+=15;
+   player1Score.innerText="";
+    if(scr>0){
+      player1Score.classList.add('score_green')
+    }else{
+      player1Score.classList.remove('score_green')
+    }
+    player1Score.innerText+=scr;
+
     greenClass="green";
   }else{
     wordInputValue=wordInput.value;
@@ -73,19 +85,68 @@ function wordInputSubmit(e){
 
 
   showWordArea.innerHTML += ` <div class="written_words  ${greenClass}">
-  <p class="written_by ">${contestantName}:</p><span class="word_line">${wordInputValue}</span>
+  <p class="written_by ${greenClass}">${contestantName}:</p><span class="word_line">${wordInputValue}</span>
 </div>`
   
 
 
 
-  wordInput.value=""
+  wordInput.value="";
+}
+
+function arrayWordFunction(e){
+  word=e.target.innerText.trim();
+  wordDisplay.style.display="none";
+  guessWord.style.display="block";
+  wordForm.style.display="block";
+  fillIn.innerText=""; 
+
+  for(let i=0; i<word.length;i++){
+   fillIn.innerHTML+="_"+'&#32';
+ }
+
+totalChar.innerText=word.length;
+fillIn.innerHTML+=totalChar.innerText;
+realWord.innerText = word;
+
+
+let time=10;
+let timeCountDown = setInterval(()=>{
+timer.innerText=time--;
+
+
+
+if(time<9){
+   timer.style.left="8%";
+}
+ if(time<0){
+   clearInterval(timeCountDown);
+   resultDisplay.style.display = "block";
+   fillIn.innerHTML=word;
+
+
+   setTimeout(()=>{
+     resultDisplay.style.display = "none";
+     ctx.clearRect(0, 0, canvas.width, canvas.height);
+     fillIn.innerHTML="";
+     for(let i=0; i<word.length;i++){
+       
+       fillIn.innerHTML+="_"+'&#32';
+     }
+     totalChar.innerText=word.length;
+     fillIn.innerHTML+=totalChar.innerText;
+     wordDisplay.style.display="block";
+     guessWord.style.display="none";
+   },5000);
+
+ }
+},1000);
+
+
+
 }
 
 
-
-let listOfWords = JSON.parse(localStorage.getItem('wordList'));
-arrOfWords.innerText="";
 
 for(let i=0; i<listOfWords.length;i++){
   let newSpan= document.createElement('span');
@@ -95,58 +156,7 @@ for(let i=0; i<listOfWords.length;i++){
 }
 
 
-arrOfWords.addEventListener('click', (e)=>{
-   word=e.target.innerText.trim();
-   wordDisplay.style.display="none";
-   guessWord.style.display="block";
-   wordForm.style.display="block";
-   fillIn.innerText=""; 
-
-   for(let i=0; i<word.length;i++){
-    fillIn.innerHTML+="_"+'&#32';
-  }
-
-totalChar.innerText=word.length;
-fillIn.innerHTML+=totalChar.innerText;
-realWord.innerText = word;
-
-
-let time=10;
-let timeCountDown = setInterval(()=>{
- timer.innerText=time--;
- if(time<9){
-    timer.style.left="8%";
- }
-  if(time<0){
-    clearInterval(timeCountDown);
-    resultDisplay.style.display = "block";
-    fillIn.innerHTML=word;
-
-    setTimeout(()=>{
-      resultDisplay.style.display = "none";
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      fillIn.innerHTML="";
-      for(let i=0; i<word.length;i++){
-        
-        fillIn.innerHTML+="_"+'&#32';
-      }
-      totalChar.innerText=word.length;
-      fillIn.innerHTML+=totalChar.innerText;
-      wordDisplay.style.display="block";
-      guessWord.style.display="none";
-    },3000);
-
-  }
-},1000);
-
-
-
-})
-
-
-
-
-
+arrOfWords.addEventListener('click', arrayWordFunction)
 wordForm.addEventListener('submit',wordInputSubmit);
 
 

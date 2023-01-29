@@ -403,8 +403,10 @@ h1 {
     font-family:var(--font);
 }
 
-.score_number{
-    color:rgb(48, 235, 48);
+
+
+.player_1_score{
+    color:red;
 }
 
 
@@ -622,6 +624,10 @@ textarea::placeholder{
 /* choose word section ends here  */
 .green{
     background-color: #53e237 !important;
+}
+
+.score_green{
+    color: #53e237 !important;
 }
 
 
