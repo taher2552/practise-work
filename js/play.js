@@ -16,6 +16,7 @@ const guessWord = document.querySelector('.guess_word');
 const playerToChooseWord = document.querySelector('.player_to_choose_word');
 const player1NameForScore = document.querySelector('.player_1_name_for_score');
 const winnerDisplay = document.querySelector('.winner_display');
+const playerWinner = document.querySelector('.player_winner');
 let player1Score = document.querySelector('.player_1_score');
 let currentRound = document.querySelector('.current_round');
 let contestantName = localStorage.getItem('player1') || "player1"
@@ -156,6 +157,7 @@ if(time<9){
       currentRound.innerText=1;
       wordDisplay.style.display="none";
       resultDisplay.style.display = "none";
+      playerWinner.innerText =contestantName;
       winnerDisplay.style.display="block";
 
       setTimeout(()=>{

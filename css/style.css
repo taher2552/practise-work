@@ -637,6 +637,12 @@ textarea::placeholder{
     display: none;
 }
 
+.winner_content h2{
+    color:white;
+    font-size: 30px;
+    padding-top: 25%;
+}
+
 /* winner display section ends here  */
 .green{
     background-color: #53e237 !important;
