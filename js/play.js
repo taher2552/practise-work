@@ -14,6 +14,8 @@ let contestantName = localStorage.getItem('player1') || "player1"
 let wordInputValue;
 
 
+
+
 function likeDislikeFunction(e){
   let action;
 
@@ -63,7 +65,8 @@ function wordInputSubmit(e){
 
 
 
-let word="cup";
+let listOfWords = JSON.parse(localStorage.getItem('wordList'));
+let word=listOfWords[2].trim();
 fillIn.innerText=""
 for(let i=0; i<word.length;i++){
   fillIn.innerHTML+="_"+'&#32';
